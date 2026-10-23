@@ -1,0 +1,21 @@
+{
+  "kind": "quotation",
+  "number": "EX-Q-001",
+  "date": "2026-01-15",
+  "validUntil": "2026-02-15",
+  "currency": "USD",
+  "issuer": { "name": "Example Studio", "address": "Example workshop\nExample City" },
+  "customer": { "name": "Example Customer", "address": "Example project site" },
+  "project": "Fictional display stand",
+  "taxRate": "5",
+  "sections": [
+    { "title": "Fabrication", "items": [
+      { "description": "Sample display panel", "spec": "Fictional 600 x 900 mm panel", "quantity": "2", "unit": "piece", "sellUnitPrice": "12.35" },
+      { "description": "Sample edge strip", "quantity": "1.5", "unit": "m", "sellUnitPrice": "2.10" }
+    ] },
+    { "title": "Delivery", "items": [
+      { "description": "Example delivery", "quantity": "1", "unit": "trip", "sellUnitPrice": "0.00" }
+    ] }
+  ],
+  "notes": "Fictional demonstration only. Every quantity and selling price in this example is invented."
+}

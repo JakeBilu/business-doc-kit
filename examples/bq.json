@@ -1,0 +1,17 @@
+{
+  "kind": "bq",
+  "number": "EX-BQ-001",
+  "date": "2026-01-15",
+  "currency": "USD",
+  "issuer": { "name": "Example Studio", "address": "Example workshop\nExample City" },
+  "customer": { "name": "Example Customer" },
+  "project": "Fictional display stand",
+  "sections": [
+    { "title": "Fabrication", "items": [
+      { "description": "Sample display panel", "spec": "Fictional 600 x 900 mm panel", "quantity": "2", "unit": "piece" },
+      { "description": "Sample edge strip", "quantity": "1.5", "unit": "m" },
+      { "description": "Optional sample bracket", "quantity": "0", "unit": "piece" }
+    ] }
+  ],
+  "notes": "Fictional example. Enter bid rates after printing."
+}

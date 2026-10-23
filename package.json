@@ -1,0 +1,20 @@
+{
+  "name": "business-doc-kit",
+  "version": "0.1.0",
+  "description": "Offline, customer-facing quotation and BQ DTO to printable HTML",
+  "type": "module",
+  "private": true,
+  "repository": { "type": "git", "url": "https://github.com/JakeBilu/business-doc-kit.git" },
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/document.mjs" } },
+  "bin": { "business-doc-kit": "./src/cli.mjs" },
+  "files": ["src/", "examples/", "scripts/", "test/", "README.md", "RUNBOOK.md", "LICENSE", "ATTRIBUTION.md"],
+  "scripts": {
+    "test": "node --test test/document.test.mjs",
+    "demo": "node scripts/demo.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
