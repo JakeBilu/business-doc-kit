@@ -1,5 +1,7 @@
 # business-doc-kit
 
+[![Renderer and CLI](https://github.com/JakeBilu/business-doc-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/JakeBilu/business-doc-kit/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/JakeBilu/business-doc-kit)](https://github.com/JakeBilu/business-doc-kit/releases/latest) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Offline, customer-facing quotation and bill-of-quantities (BQ) documents from small JSON DTOs. This release candidate generates **printable HTML**, with a shared layout and no network requests or package dependencies. Version 0.1.0 is a small, MIT-licensed source release. All examples contain fictional data; external adoption has not yet been established.
 
 **PDF behavior:** the library and CLI return HTML, never PDF bytes. Open an emitted `.html` in a browser, choose Print, then Save as PDF. Browser pagination, installed-font coverage and print settings affect the result. The CLI refuses `.pdf` filenames. There is no server PDF renderer in this candidate.
@@ -20,7 +22,9 @@ The demo creates `artifacts/quotation.html`, `artifacts/bq.html` and `artifacts/
 
 Equivalent npm commands are `npm test`, `npm run check` and `npm run demo`; the direct Node commands work without npm shell configuration. `node src/cli.mjs --help` prints usage. CLI errors use stderr and exit code 1; success uses stdout and exit code 0. Input must be UTF-8 JSON, a regular file at most 5 MiB. Validation occurs before the output is created.
 
-## Install from source
+## Install
+
+No npm registry package is published yet, so install from the release tarball or from source.
 
 ```sh
 git clone https://github.com/JakeBilu/business-doc-kit.git
@@ -28,12 +32,16 @@ cd business-doc-kit
 node src/cli.mjs --help
 ```
 
-No npm registry package is published. To use the library from another local Node project, install this checked-out directory with `npm install /path/to/business-doc-kit`, then import `business-doc-kit`. Installation adds no third-party dependencies. To generate one document without running the demo, create an output directory first:
+Released source archives are on the [releases page](https://github.com/JakeBilu/business-doc-kit/releases); the current release is [v0.1.0](https://github.com/JakeBilu/business-doc-kit/releases/tag/v0.1.0). To use the library from another local Node project, install this checked-out directory with `npm install /path/to/business-doc-kit`, then import `business-doc-kit`. Installation adds no third-party dependencies.
+
+### One command, one document
 
 ```sh
 mkdir output
 node src/cli.mjs examples/quotation.json output/quotation.html
 ```
+
+This renders the fictional sample quotation to `output/quotation.html`; open it in a browser and print to PDF. The CLI refuses to overwrite an existing file, refuses a `.pdf` output name and never emits PDF bytes.
 
 ## Library
 
