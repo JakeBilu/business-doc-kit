@@ -20,3 +20,26 @@ node scripts/check.mjs
 These tests exercise rounding, escaping, bounds and CLI failures, not every browser's pagination or font coverage. An independent review also rendered the long example through an external Chromium browser and inspected the PDF text/pages; that is one environment, not a universal print guarantee.
 
 Generated artifacts are not source. Public source should contain only the explicit release manifest, not private documents or browser profiles. License/attribution scope is in LICENSE and ATTRIBUTION.md.
+
+## Release workflow
+
+Cutting a release is one tag plus the version bump in `package.json`:
+
+```sh
+npm version 0.1.2 --no-git-tag-version   # or edit the field by hand
+git add package.json
+git commit -m "Release 0.1.2"
+git tag -a v0.1.2 -m "business-doc-kit 0.1.2"
+git push origin main && git push origin v0.1.2
+```
+
+The planned `Release` workflow publishes to the npm registry with `--provenance` and then creates the GitHub release
+for that tag. It is prepared but not yet installed in this repository, because the local GitHub CLI token does not carry
+the `workflow` scope that GitHub requires for adding a file under `.github/workflows`. Until the maintainer refreshes the
+token (`gh auth refresh -s workflow`), publish from a local copy with `npm publish --access public` and cut the GitHub
+release with `gh release create v0.1.2 --generate-notes`. The prepared workflow file is kept outside the repository
+until that scope is available; it needs one repository secret, `NPM_TOKEN`, holding an npm automation token, and it does
+nothing at all while that secret is absent.
+
+Before publishing, check the version number, the changelog-worthy changes, and that `npm pack --dry-run` lists only
+intended files. The npm package must keep the same version as the git tag it was cut from.

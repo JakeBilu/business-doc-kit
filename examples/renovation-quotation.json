@@ -1,0 +1,34 @@
+{
+  "kind": "quotation",
+  "number": "EX-Q-002",
+  "date": "2026-01-20",
+  "validUntil": "2026-02-20",
+  "currency": "MYR",
+  "issuer": { "name": "Example Studio", "address": "Example workshop\nExample City" },
+  "customer": { "name": "Example Customer", "address": "Example project site" },
+  "project": "Fictional single-unit renovation",
+  "taxRate": "6",
+  "sections": [
+    { "title": "Preparation and demolition", "items": [
+      { "description": "Partition removal", "spec": "Fictional non-load-bearing partition", "quantity": "18.5", "unit": "m2", "sellUnitPrice": "22.00" },
+      { "description": "Ceiling board removal", "quantity": "24", "unit": "m2", "sellUnitPrice": "18.50" },
+      { "description": "Debris bagging and removal", "quantity": "1", "unit": "lot", "sellUnitPrice": "450.00" }
+    ] },
+    { "title": "Walls and ceiling", "items": [
+      { "description": "Lightweight partition build-up", "spec": "Fictional 63 mm stud with single-side board", "quantity": "18.5", "unit": "m2", "sellUnitPrice": "96.00" },
+      { "description": "Cement board ceiling", "quantity": "24", "unit": "m2", "sellUnitPrice": "78.00" },
+      { "description": "Skirting", "quantity": "26", "unit": "m", "sellUnitPrice": "14.50" }
+    ] },
+    { "title": "Floor finishes", "items": [
+      { "description": "Floor screed, 3 layers", "quantity": "32", "unit": "m2", "sellUnitPrice": "38.00" },
+      { "description": "Porcelain tile laying, 600 x 600 mm", "spec": "Fictional standard grade", "quantity": "32", "unit": "m2", "sellUnitPrice": "72.00" },
+      { "description": "Tile skirting cut and laid", "quantity": "26", "unit": "m", "sellUnitPrice": "16.00" }
+    ] },
+    { "title": "Painting and finishing", "items": [
+      { "description": "Wall and ceiling putty", "quantity": "85", "unit": "m2", "sellUnitPrice": "11.00" },
+      { "description": "Interior emulsion, two coats", "quantity": "85", "unit": "m2", "sellUnitPrice": "19.50" },
+      { "description": "Touch-up and cutting-in", "quantity": "1", "unit": "lot", "sellUnitPrice": "320.00" }
+    ] }
+  ],
+  "notes": "Fictional worked example: a small renovation quotation with invented quantities and invented selling prices. The tax rate is a fictional placeholder, not a jurisdiction rule. No real customer, site or price list is represented."
+}

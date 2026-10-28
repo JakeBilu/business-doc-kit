@@ -58,7 +58,7 @@ The ES module API is also declared in `src/index.d.ts`. `prepareDocument` return
 
 ## Input contract
 
-See [examples/quotation.json](examples/quotation.json) and [examples/bq.json](examples/bq.json). A third example, [examples/renovation-bq.json](examples/renovation-bq.json), is a small renovation bill of quantities: it stays in the BQ shape, so it carries no prices at all and only blank bid-rate cells. All fields are case-sensitive. Arrays preserve input order; sections do not merge by name. Each row is an independent billable quotation line or BQ quantity; pre-filter internal/hidden rows before constructing the DTO.
+See [examples/quotation.json](examples/quotation.json) and [examples/bq.json](examples/bq.json). A third example, [examples/renovation-bq.json](examples/renovation-bq.json), is a small renovation bill of quantities: it stays in the BQ shape, so it carries no prices at all and only blank bid-rate cells. A fourth example, [examples/renovation-quotation.json](examples/renovation-quotation.json), is the same fictional renovation expressed as a quotation, with invented selling prices and a fictional tax rate. All fields are case-sensitive. Arrays preserve input order; sections do not merge by name. Each row is an independent billable quotation line or BQ quantity; pre-filter internal/hidden rows before constructing the DTO.
 
 | Field | Rule |
 | --- | --- |
@@ -97,6 +97,28 @@ All variable text is escaped, including document titles and section headings. No
 A4 print CSS repeats table headings, wraps long/unbroken text, keeps ordinary rows together and allows oversized rows to split. Notes may span pages; totals are kept together. It does not truncate descriptions to one line. Pagination varies by browser; inspect the print preview when integrating a new template or very long content. Print helpers are hidden in printed output.
 
 Limits are 1,000 sections, 10,000 total rows, 50,000 UTF-16 code units per text field, 2,000,000 combined text code units and 5 MiB CLI input. Invalid control characters, malformed Unicode, sparse arrays and non-plain objects are rejected. The library limits structured content; only the CLI bounds raw input bytes. Rendering is synchronous and intended for these bounded local documents.
+
+## Worked examples and the maintainer workflow
+
+| Example | Shape | What it shows |
+| --- | --- | --- |
+| `examples/quotation.json` | quotation | the smallest complete quotation, including a zero-price delivery line |
+| `examples/bq.json` | BQ | a bill of quantities with blank bid-rate cells |
+| `examples/renovation-quotation.json` | quotation | a room-by-room renovation priced with invented selling prices |
+| `examples/renovation-bq.json` | BQ | the same renovation measured only, with no prices |
+
+The maintainer uses this project for one concrete workflow: turning a scope of work into a document a customer can read.
+The scope is written as a customer-facing DTO, because there is no cost, markup or discount field to leak, and the result
+is a printable HTML file that is opened in a browser and printed to PDF. The same scope can then be issued as a quotation
+and as a bill of quantities from one source of truth, and every figure in the document can be recomputed from the JSON.
+
+Nothing in that workflow needs a network request, a database or an account, which is why the project has no telemetry and
+collects no usage data.
+
+## Reporting a problem
+
+Issues are welcome. The issue template asks for the exact command, a redacted or synthetic DTO and the Node version, so a
+report can be reproduced. Please do not paste real customer names, addresses or prices into a public issue.
 
 ## Verify and provenance
 

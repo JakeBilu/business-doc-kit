@@ -1,6 +1,6 @@
 {
   "name": "business-doc-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Offline, customer-facing quotation and BQ DTO to printable HTML",
   "type": "module",
   "private": false,
