@@ -1,0 +1,32 @@
+{
+  "kind": "bq",
+  "number": "EX-BQ-002",
+  "date": "2026-01-20",
+  "currency": "MYR",
+  "issuer": { "name": "Example Studio", "address": "Example workshop\nExample City" },
+  "customer": { "name": "Example Customer" },
+  "project": "Fictional single-unit renovation",
+  "sections": [
+    { "title": "Demolition and preparation", "items": [
+      { "description": "Existing partition removal", "spec": "Fictional non-load-bearing partition, floor to ceiling", "quantity": "18.5", "unit": "m2" },
+      { "description": "Existing ceiling board removal", "quantity": "24", "unit": "m2" },
+      { "description": "Debris bagging and removal", "quantity": "1", "unit": "lot" }
+    ] },
+    { "title": "Walls and ceiling", "items": [
+      { "description": "Lightweight partition build-up", "spec": "Fictional 63 mm stud with single-side board", "quantity": "18.5", "unit": "m2" },
+      { "description": "Cement board ceiling", "quantity": "24", "unit": "m2" },
+      { "description": "Skirting", "quantity": "26", "unit": "m" }
+    ] },
+    { "title": "Floor finishes", "items": [
+      { "description": "Floor screed, 3 layers", "quantity": "32", "unit": "m2" },
+      { "description": "Porcelain tile laying, 600 x 600 mm", "spec": "Fictional standard grade", "quantity": "32", "unit": "m2" },
+      { "description": "Tile skirting cut and laid", "quantity": "26", "unit": "m" }
+    ] },
+    { "title": "Paint and finishing", "items": [
+      { "description": "Wall and ceiling putty", "quantity": "85", "unit": "m2" },
+      { "description": "Interior emulsion, two coats", "quantity": "85", "unit": "m2" },
+      { "description": "Touch-up and cutting-in", "quantity": "1", "unit": "lot" }
+    ] }
+  ],
+  "notes": "Fictional worked example: a small renovation bill of quantities. No prices are included, because a BQ carries blank bid-rate cells; enter bid rates after printing. All project names, quantities and specifications are invented."
+}

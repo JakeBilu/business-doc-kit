@@ -58,7 +58,7 @@ The ES module API is also declared in `src/index.d.ts`. `prepareDocument` return
 
 ## Input contract
 
-See [examples/quotation.json](examples/quotation.json) and [examples/bq.json](examples/bq.json). All fields are case-sensitive. Arrays preserve input order; sections do not merge by name. Each row is an independent billable quotation line or BQ quantity; pre-filter internal/hidden rows before constructing the DTO.
+See [examples/quotation.json](examples/quotation.json) and [examples/bq.json](examples/bq.json). A third example, [examples/renovation-bq.json](examples/renovation-bq.json), is a small renovation bill of quantities: it stays in the BQ shape, so it carries no prices at all and only blank bid-rate cells. All fields are case-sensitive. Arrays preserve input order; sections do not merge by name. Each row is an independent billable quotation line or BQ quantity; pre-filter internal/hidden rows before constructing the DTO.
 
 | Field | Rule |
 | --- | --- |
