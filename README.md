@@ -32,7 +32,7 @@ cd business-doc-kit
 node src/cli.mjs --help
 ```
 
-Released source archives are on the [releases page](https://github.com/JakeBilu/business-doc-kit/releases); the current release is [v0.1.0](https://github.com/JakeBilu/business-doc-kit/releases/tag/v0.1.0). To use the library from another local Node project, install this checked-out directory with `npm install /path/to/business-doc-kit`, then import `business-doc-kit`. Installation adds no third-party dependencies.
+Released source archives are on the [releases page](https://github.com/JakeBilu/business-doc-kit/releases); the badge above tracks the newest release. To use the library from another local Node project, install this checked-out directory with `npm install /path/to/business-doc-kit`, then import `business-doc-kit`. Installation adds no third-party dependencies.
 
 ### One command, one document
 
