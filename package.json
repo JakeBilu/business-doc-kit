@@ -19,7 +19,7 @@
     }
   },
   "bin": {
-    "business-doc-kit": "./src/cli.mjs"
+    "business-doc-kit": "src/cli.mjs"
   },
   "files": [
     "src/",
